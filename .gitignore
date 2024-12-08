@@ -1,0 +1,4 @@
+# Project-specific data files
+*.pickle
+image_embeddings.pickle
+coco_images_resized/

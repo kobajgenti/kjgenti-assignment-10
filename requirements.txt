@@ -1,0 +1,4 @@
+flask
+torch
+open-clip-torch
+Pillow

@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.search-form {
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: inline-block;
+    width: 200px;
+    font-size: 1.1em;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+input[type="number"] {
+    width: 60px;
+}
+
+button {
+    padding: 8px 20px;
+    font-size: 1em;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+#resultImages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-item {
+    text-align: center;
+}
+
+.result-item img {
+    max-width: 300px;
+    border: 1px solid #ccc;
+}
+
+.similarity {
+    margin-top: 10px;
+    font-size: 1.1em;
+}
+
+/* Loading indicator */
+.loading-indicator {
+    text-align: center;
+    padding: 20px;
+    display: none;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border: 4px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 4px solid #3498db;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Form transitions */
+.form-group {
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.form-group.hidden {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+}
+
+/* Error message */
+.error-message {
+    color: #e74c3c;
+    padding: 10px;
+    background-color: #fdf0ef;
+    border-radius: 4px;
+    margin: 10px 0;
+    display: none;
+}
+
+/* Results section */
+#results {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+#results.loading {
+    opacity: 0.5;
+}
+
+/* Improved button style */
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+}
+
